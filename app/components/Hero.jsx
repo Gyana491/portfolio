@@ -19,8 +19,10 @@ export default function Hero() {
               src="/profile.jpg"
               alt="Gyana Ranjan"
               fill
+              sizes="(max-width: 768px) 192px, 320px"
               className="object-cover"
               priority
+              quality={100}
             />
           </div>
         </motion.div>

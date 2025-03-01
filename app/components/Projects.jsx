@@ -73,7 +73,9 @@ export default function Projects() {
                   src={project.image}
                   alt={project.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
+                  priority={index === 0}
                 />
               </div>
               <div className="space-y-4">
@@ -125,6 +127,7 @@ export default function Projects() {
                     src={selectedProject.image}
                     alt={selectedProject.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover rounded-lg"
                   />
                 </div>

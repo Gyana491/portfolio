@@ -14,7 +14,7 @@ const experienceData = [
     company: "Swapify",
     type: "Part-time",
     location: "On-site", 
-    duration: "Jan 2024 - Present · 1 yr 3 mos",
+    duration: "Jan 2024 - Present",
     description: "As the Founder of Swapify, redefining the second-hand marketplace by making it secure, ad-free, and community-driven with Aadhaar-verified users and a trust-based system.",
     image: "/swapify.jpg",
     skills: ["Leadership", "Product Development", "Team Management", "Strategy"]
@@ -25,12 +25,14 @@ const ExperienceCard = ({ experience }) => {
   return (
     <div className="relative p-6 rounded-2xl bg-gray-900/50 backdrop-blur-sm border border-gray-200/10">
       <div className="flex flex-col md:flex-row gap-6">
-        <div className="relative w-16 h-16 md:w-24 md:h-24 flex-shrink-0">
+        <div className="relative w-20 h-20 md:w-24 md:h-24 flex-shrink-0 overflow-hidden rounded-xl">
           <Image
             src={experience.image}
             alt={experience.company}
             fill
-            className="object-cover rounded-lg"
+            sizes="(max-width: 768px) 80px, 96px"
+            className="object-cover"
+            priority
           />
         </div>
         

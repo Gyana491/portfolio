@@ -42,7 +42,9 @@ export default function Navbar() {
                 src="/profile.jpg"
                 alt="Gyana Ranjan"
                 fill
+                sizes="40px"
                 className="object-cover"
+                priority
               />
             </div>
             <span className="text-2xl font-bold tracking-tight bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
@@ -89,7 +91,9 @@ export default function Navbar() {
                   src="/profile.jpg"
                   alt="Gyana Ranjan"
                   fill
+                  sizes="32px"
                   className="object-cover"
+                  priority
                 />
               </div>
               <span className="text-xl font-bold tracking-tight bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">

@@ -3,7 +3,7 @@ export default function Education() {
     {
       degree: "Master of Computer Applications (MCA)",
       institution: "VIT Bhopal University",
-      period: "2023 - Present",
+      period: "2024 - Present",
       details: "Currently in first year, focusing on advanced computer science concepts and practical application development."
     },
     {
