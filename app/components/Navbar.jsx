@@ -1,7 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -27,10 +26,10 @@ export default function Navbar() {
   const navItems = ['Home', 'About', 'Skills', 'Experience', 'Projects', 'Services', 'Contact'];
 
   return (
-    <div className={`fixed top-0 left-0 right-0 w-full z-[100] ${
-      scrolled ? 'bg-black/90 backdrop-blur-xl shadow-lg' : 'bg-transparent'
-    }`}>
-      <header className="w-full">
+    <div className="fixed top-0 left-0 right-0 z-[100]">
+      <header className={`w-full transition-colors duration-300 ${
+        scrolled ? 'bg-black/90 backdrop-blur-xl shadow-lg' : 'bg-transparent'
+      }`}>
         <div className="container py-4">
           {/* Desktop: Single row layout */}
           <div className="hidden md:flex items-center justify-between">
@@ -38,7 +37,7 @@ export default function Navbar() {
               href="/" 
               className="flex items-center gap-3"
             >
-              <div className="relative w-10 h-10 overflow-hidden rounded-full border-2 border-primary">
+              <div className="w-10 h-10 overflow-hidden rounded-full border-2 border-primary">
                 <img
                   src="/profile.jpg"
                   alt="Gyana Ranjan"
@@ -78,13 +77,13 @@ export default function Navbar() {
           </div>
 
           {/* Mobile: Two row layout */}
-          <div className="md:hidden space-y-4">
-            <div className="flex items-center justify-between">
+          <div className="md:hidden">
+            <div className="flex items-center justify-between mb-4">
               <Link 
                 href="/" 
                 className="flex items-center gap-2"
               >
-                <div className="relative w-8 h-8 overflow-hidden rounded-full border-2 border-primary">
+                <div className="w-8 h-8 overflow-hidden rounded-full border-2 border-primary">
                   <img
                     src="/profile.jpg"
                     alt="Gyana Ranjan"
@@ -103,15 +102,15 @@ export default function Navbar() {
               </Link>
             </div>
             
-            <nav className="w-full overflow-x-auto scrollbar-hide">
-              <div className="flex items-center gap-2 px-2 min-w-max">
+            <nav className="w-full overflow-x-auto scrollbar-hide -mx-4 px-4">
+              <div className="flex items-center gap-2 min-w-max pb-4">
                 {navItems.map((item) => (
                   <Link
                     key={item}
                     href={`#${item.toLowerCase()}`}
                     className={`
                       px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full
-                      border border-gray-200/20
+                      border border-gray-200/20 whitespace-nowrap
                       ${activeSection === item.toLowerCase()
                         ? 'bg-gradient-to-r from-primary to-blue-600 text-white border-transparent shadow-lg shadow-primary/30'
                         : 'text-gray-200 hover:border-primary hover:text-primary'
