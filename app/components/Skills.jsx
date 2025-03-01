@@ -6,7 +6,7 @@ import {
   SiJavascript, SiTypescript, SiPython, SiMysql,
   SiGit, SiDocker, SiAmazon, SiLinux,
   SiHtml5, SiCss3, SiRedux, SiFirebase,
-  SiFigma, SiPostman, SiNginx, SiBuymeacoffee, SiSpringboot
+  SiFigma, SiPostman, SiNginx, SiOpenjdk, SiSpring
 } from 'react-icons/si';
 
 const fadeInUp = {
@@ -52,8 +52,8 @@ export default function Skills() {
       skills: [
         { name: "JavaScript", icon: <SiJavascript className="text-[#F7DF1E]" /> },
         { name: "TypeScript", icon: <SiTypescript className="text-[#3178C6]" /> },
-        { name: "Java", icon: <SiBuymeacoffee className="text-[#437291]" /> },
-        { name: "Spring Boot", icon: <SiSpringboot className="text-[#6DB33F]" /> },
+        { name: "Java", icon: <SiOpenjdk className="text-[#437291]" /> },
+        { name: "Spring", icon: <SiSpring className="text-[#6DB33F]" /> },
         { name: "Python", icon: <SiPython className="text-[#3776AB]" /> },
         { name: "WordPress", icon: <SiWordpress className="text-[#21759B]" /> }
       ]

@@ -43,10 +43,10 @@ export default function Contact() {
                 <div className="text-left">
                   <h3 className="text-xl font-semibold text-gray-200 group-hover:text-primary">Send an Email</h3>
                   <p className="text-gray-400">gyanaranjanmohanta2004@gmail.com</p>
-            </div>
-            </div>
+                </div>
+              </div>
             </a>
-            </div>
+          </div>
 
           {/* LinkedIn CTA */}
           <div className="pt-8">
@@ -61,7 +61,7 @@ export default function Contact() {
               </svg>
               Connect on LinkedIn
             </a>
-            </div>
+          </div>
         </div>
       </div>
     </section>

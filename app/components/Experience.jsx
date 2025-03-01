@@ -24,38 +24,37 @@ const experienceData = [
 const ExperienceCard = ({ experience }) => {
   return (
     <div className="relative p-6 rounded-2xl bg-gray-900/50 backdrop-blur-sm border border-gray-200/10">
-      <div className="flex items-start gap-6">
-        <div className="relative flex-shrink-0 w-16 h-16 overflow-hidden rounded-xl">
+      <div className="flex flex-col md:flex-row gap-6">
+        <div className="relative w-16 h-16 md:w-24 md:h-24 flex-shrink-0">
           <Image
             src={experience.image}
             alt={experience.company}
             fill
-            className="object-cover"
+            className="object-cover rounded-lg"
           />
         </div>
         
-        <div className="space-y-4">
+        <div className="flex-grow space-y-4">
           <div>
             <h3 className="text-xl font-bold text-gray-200">{experience.title}</h3>
-            <div className="flex flex-wrap items-center gap-2 mt-1 text-gray-400">
-              <span className="font-medium text-primary">{experience.company}</span>
-              <span>·</span>
+            <p className="text-primary">{experience.company}</p>
+            <div className="flex flex-wrap gap-2 mt-1 text-sm text-gray-400">
               <span>{experience.type}</span>
-              <span>·</span>
+              <span>•</span>
               <span>{experience.location}</span>
-            </div>
-            <div className="mt-1 text-sm text-gray-400">
-              {experience.duration}
+              <span>•</span>
+              <span>{experience.duration}</span>
             </div>
           </div>
-
-          <p className="text-gray-300">
-            {experience.description}
-          </p>
-
+          
+          <p className="text-gray-300">{experience.description}</p>
+          
           <div className="flex flex-wrap gap-2">
             {experience.skills.map((skill, index) => (
-              <span key={index} className="px-3 py-1 text-sm rounded-full bg-primary/10 text-primary">
+              <span
+                key={index}
+                className="px-3 py-1 text-sm rounded-full bg-gray-200/10 text-gray-200 border border-gray-200/20"
+              >
                 {skill}
               </span>
             ))}
