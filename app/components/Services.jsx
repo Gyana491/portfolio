@@ -39,12 +39,12 @@ export default function Services() {
         
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
-            <div key={index} className="p-6 transition-all bg-white rounded-lg shadow-md dark:bg-gray-800 hover:shadow-lg hover:border-primary">
-              <div className="flex items-center justify-center w-16 h-16 mb-4 text-3xl bg-blue-100 rounded-full dark:bg-blue-900">
+            <div key={index} className="p-6 transition-all bg-gray-800 rounded-lg shadow-md hover:shadow-lg hover:border hover:border-primary/50">
+              <div className="flex items-center justify-center w-16 h-16 mb-4 text-3xl bg-blue-900/50 rounded-full">
                 {service.icon}
               </div>
-              <h3 className="mb-3 text-xl font-bold">{service.title}</h3>
-              <p className="text-gray-700 dark:text-gray-300">{service.description}</p>
+              <h3 className="mb-3 text-xl font-bold text-gray-200">{service.title}</h3>
+              <p className="text-gray-300">{service.description}</p>
             </div>
           ))}
         </div>

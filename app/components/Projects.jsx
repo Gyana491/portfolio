@@ -65,7 +65,7 @@ export default function Projects() {
               variants={fadeInUp}
               whileHover={{ scale: 1.02 }}
               className={`grid gap-8 md:grid-cols-2 items-center p-6 rounded-lg ${
-                project.featured ? 'bg-primary/10' : 'bg-white dark:bg-gray-800'
+                project.featured ? 'bg-primary/10' : 'bg-gray-800'
               }`}
             >
               <div className="relative h-64 overflow-hidden rounded-lg">
@@ -77,8 +77,8 @@ export default function Projects() {
                 />
               </div>
               <div className="space-y-4">
-                <h3 className="text-2xl font-bold">{project.title}</h3>
-                <p className="text-gray-700 dark:text-gray-300">{project.description}</p>
+                <h3 className="text-2xl font-bold text-gray-200">{project.title}</h3>
+                <p className="text-gray-300">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, i) => (
                     <span 
@@ -109,10 +109,10 @@ export default function Projects() {
 
         {selectedProject && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50">
-            <div className="relative w-full max-w-3xl p-8 bg-white rounded-lg dark:bg-gray-800">
+            <div className="relative w-full max-w-3xl p-8 bg-gray-800 rounded-lg">
               <button
                 onClick={() => setSelectedProject(null)}
-                className="absolute top-4 right-4 p-2 text-gray-500 hover:text-gray-900 dark:hover:text-gray-100"
+                className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-100"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -130,7 +130,7 @@ export default function Projects() {
                 </div>
                 <div className="space-y-4">
                   <h3 className="text-2xl font-bold">{selectedProject.title}</h3>
-                  <p className="text-gray-700 dark:text-gray-300">{selectedProject.description}</p>
+                  <p className="text-gray-300">{selectedProject.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {selectedProject.technologies.map((tech, i) => (
                       <span key={i} className="px-3 py-1 text-sm bg-gray-200 rounded-full dark:bg-gray-700">
@@ -138,7 +138,7 @@ export default function Projects() {
                       </span>
                     ))}
                   </div>
-                  <p className="text-gray-700 dark:text-gray-300">{selectedProject.details}</p>
+                  <p className="text-gray-300">{selectedProject.details}</p>
                   {selectedProject.link && (
                     <a
                       href={selectedProject.link}

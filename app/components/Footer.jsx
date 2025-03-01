@@ -10,11 +10,11 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="py-8 bg-gray-100 dark:bg-gray-900">
+    <footer className="py-8 bg-gray-900">
       <div className="container">
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
           <div>
-            <p className="font-medium">&copy; {currentYear} Gyana Ranjan. All rights reserved.</p>
+            <p className="font-medium text-gray-300">&copy; {currentYear} Gyana Ranjan. All rights reserved.</p>
           </div>
           
           <div className="flex gap-6">
@@ -24,7 +24,7 @@ export default function Footer() {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-primary transition"
+                className="text-gray-300 hover:text-primary transition"
               >
                 {link.name}
               </a>

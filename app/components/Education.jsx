@@ -33,11 +33,11 @@ export default function Education() {
         
         <div className="grid gap-6 md:grid-cols-2">
           {education.map((edu, index) => (
-            <div key={index} className="p-6 transition-transform bg-white rounded-lg shadow-md dark:bg-gray-800 hover:translate-y-[-5px]">
+            <div key={index} className="p-6 transition-transform bg-gray-800 rounded-lg shadow-md hover:translate-y-[-5px]">
               <h3 className="mb-2 text-xl font-semibold text-primary">{edu.degree}</h3>
-              <h4 className="mb-1 text-lg font-medium">{edu.institution}</h4>
-              <p className="mb-3 text-gray-500 dark:text-gray-400">{edu.period}</p>
-              <p className="text-gray-700 dark:text-gray-300">{edu.details}</p>
+              <h4 className="mb-1 text-lg font-medium text-gray-200">{edu.institution}</h4>
+              <p className="mb-3 text-gray-400">{edu.period}</p>
+              <p className="text-gray-300">{edu.details}</p>
             </div>
           ))}
         </div>

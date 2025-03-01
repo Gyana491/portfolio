@@ -12,7 +12,7 @@ export default function CTA() {
           <div className="flex justify-center gap-4">
             <a
               href="#contact"
-              className="btn bg-white text-primary hover:bg-gray-100"
+              className="btn bg-gray-900 text-white hover:bg-gray-800"
             >
               Get in Touch
             </a>
@@ -20,7 +20,7 @@ export default function CTA() {
               href="https://www.linkedin.com/in/mr-gyan491/"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn border border-white text-white hover:bg-white hover:text-primary"
+              className="btn border border-white text-white hover:bg-white/10"
             >
               Connect on LinkedIn
             </a>
