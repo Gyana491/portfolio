@@ -1,6 +1,6 @@
 "use client";
 import { motion } from 'framer-motion';
-import Image from 'next/image';
+
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -25,14 +25,11 @@ const ExperienceCard = ({ experience }) => {
   return (
     <div className="relative p-6 rounded-2xl bg-gray-900/50 backdrop-blur-sm border border-gray-200/10">
       <div className="flex flex-col md:flex-row gap-6">
-        <div className="relative w-20 h-20 md:w-24 md:h-24 flex-shrink-0 overflow-hidden rounded-xl">
-          <Image
+        <div className="w-20 h-20 md:w-24 md:h-24 flex-shrink-0 overflow-hidden rounded-xl">
+          <img
             src={experience.image}
             alt={experience.company}
-            fill
-            sizes="(max-width: 768px) 80px, 96px"
-            className="object-cover"
-            priority
+            className="w-full h-full object-cover"
           />
         </div>
         

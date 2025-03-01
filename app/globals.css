@@ -5,12 +5,14 @@
 :root {
   --background: #0a0a0a;
   --foreground: #ededed;
+  --header-height: 80px;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: 'Inter', Arial, Helvetica, sans-serif;
+  padding-top: var(--header-height);
 }
 
 @layer components {
@@ -73,6 +75,8 @@ body {
 }
 
 header {
+  width: 100%;
+  height: var(--header-height);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);

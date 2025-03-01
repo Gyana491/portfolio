@@ -1,7 +1,5 @@
 "use client";
 import { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 const fadeInUp = {
@@ -68,14 +66,11 @@ export default function Projects() {
                 project.featured ? 'bg-primary/10' : 'bg-gray-800'
               }`}
             >
-              <div className="relative h-64 overflow-hidden rounded-lg">
-                <Image
+              <div className="h-64 overflow-hidden rounded-lg">
+                <img
                   src={project.image}
                   alt={project.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
-                  priority={index === 0}
+                  className="w-full h-full object-cover"
                 />
               </div>
               <div className="space-y-4">
@@ -122,21 +117,19 @@ export default function Projects() {
               </button>
               
               <div className="grid gap-8 md:grid-cols-2">
-                <div className="relative h-64">
-                  <Image
+                <div className="h-64 overflow-hidden rounded-lg">
+                  <img
                     src={selectedProject.image}
                     alt={selectedProject.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover rounded-lg"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-bold">{selectedProject.title}</h3>
+                  <h3 className="text-2xl font-bold text-gray-200">{selectedProject.title}</h3>
                   <p className="text-gray-300">{selectedProject.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {selectedProject.technologies.map((tech, i) => (
-                      <span key={i} className="px-3 py-1 text-sm bg-gray-200 rounded-full dark:bg-gray-700">
+                      <span key={i} className="px-3 py-1 text-sm rounded-full bg-gray-200/10 text-gray-200 border border-gray-200/20">
                         {tech}
                       </span>
                     ))}
