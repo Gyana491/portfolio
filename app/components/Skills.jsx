@@ -88,28 +88,28 @@ export default function Skills() {
 
         <motion.div 
           variants={staggerContainer}
-          className="grid gap-8 md:grid-cols-2"
+          className="grid gap-6 md:gap-8 md:grid-cols-2"
         >
           {skillCategories.map((category, index) => (
             <motion.div
               key={index}
               variants={fadeInUp}
-              className="p-6 rounded-2xl bg-gray-900/50 backdrop-blur-sm border border-gray-200/10"
+              className="p-4 sm:p-6 rounded-2xl bg-gray-900/50 backdrop-blur-sm border border-gray-200/10"
             >
-              <h3 className="mb-6 text-xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
+              <h3 className="mb-4 sm:mb-6 text-lg sm:text-xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
                 {category.title}
               </h3>
-              <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4 sm:grid-cols-3">
                 {category.skills.map((skill, skillIndex) => (
                   <motion.div
                     key={skillIndex}
                     whileHover={{ scale: 1.05 }}
-                    className="flex items-center gap-3 p-3 transition-all rounded-lg bg-gray-800/50 hover:bg-gray-800/80 group"
+                    className="flex items-center gap-2 sm:gap-3 p-2 sm:p-3 transition-all rounded-lg bg-gray-800/50 hover:bg-gray-800/80 group"
                   >
-                    <div className="text-2xl transition-all group-hover:scale-110">
+                    <div className="text-xl sm:text-2xl transition-all group-hover:scale-110 flex-shrink-0">
                       {skill.icon}
                     </div>
-                    <span className="text-sm font-medium text-gray-300 group-hover:text-white">
+                    <span className="text-xs sm:text-sm font-medium text-gray-300 group-hover:text-white truncate">
                       {skill.name}
                     </span>
                   </motion.div>

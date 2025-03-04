@@ -28,7 +28,7 @@ export default function About() {
       title: "Full Stack Development",
       description: "Building end-to-end web applications with modern technologies and best practices.",
       icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
         </svg>
       )
@@ -37,7 +37,7 @@ export default function About() {
       title: "WordPress Development",
       description: "Creating custom WordPress solutions with optimized performance and security.",
       icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
         </svg>
       )
@@ -46,7 +46,7 @@ export default function About() {
       title: "Technical SEO",
       description: "Implementing SEO best practices for better search engine visibility and performance.",
       icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
         </svg>
       )
@@ -55,7 +55,7 @@ export default function About() {
       title: "Cloud Integration",
       description: "Integrating applications with cloud services for scalable and reliable solutions.",
       icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
         </svg>
       )
@@ -77,39 +77,39 @@ export default function About() {
           About Me
         </motion.h2>
         
-        <div className="grid gap-12 md:grid-cols-2">
+        <div className="grid gap-8 md:gap-12 md:grid-cols-2">
           <motion.div 
             variants={staggerContainer}
-            className="space-y-6"
+            className="space-y-5 sm:space-y-6"
           >
             <motion.div 
               variants={fadeInUp}
-              className="p-6 space-y-4 rounded-lg bg-gray-900/50 backdrop-blur-sm border border-gray-200/10"
+              className="p-4 sm:p-6 space-y-3 sm:space-y-4 rounded-lg bg-gray-900/50 backdrop-blur-sm border border-gray-200/10"
             >
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
+              <h3 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
                 Who I Am
               </h3>
-              <p className="text-gray-300">
+              <p className="text-sm sm:text-base text-gray-300">
                 I'm Gyana Ranjan Mohanta, a passionate Full Stack Developer and Tech Enthusiast currently pursuing my MCA at VIT Bhopal. 
                 With a strong foundation in both front-end and back-end technologies, I specialize in creating efficient and scalable web applications.
               </p>
-              <p className="text-gray-300">
+              <p className="text-sm sm:text-base text-gray-300">
                 My journey in technology began during my BSc in Information Technology & Management at Ravenshaw University, where I developed a keen interest in web development and problem-solving.
               </p>
             </motion.div>
 
             <motion.div 
               variants={staggerContainer}
-              className="grid grid-cols-2 gap-4"
+              className="grid grid-cols-2 gap-3 sm:gap-4"
             >
               {stats.map((stat, index) => (
                 <motion.div
                   key={index}
                   variants={fadeInUp}
-                  className="p-4 text-center rounded-lg bg-gray-900/50 backdrop-blur-sm border border-gray-200/10"
+                  className="p-3 sm:p-4 text-center rounded-lg bg-gray-900/50 backdrop-blur-sm border border-gray-200/10"
                 >
-                  <div className="text-3xl font-bold text-primary">{stat.value}</div>
-                  <div className="text-sm text-gray-400">{stat.label}</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-primary">{stat.value}</div>
+                  <div className="text-xs sm:text-sm text-gray-400">{stat.label}</div>
                 </motion.div>
               ))}
             </motion.div>
@@ -117,9 +117,9 @@ export default function About() {
 
           <motion.div 
             variants={staggerContainer}
-            className="space-y-6"
+            className="space-y-4 sm:space-y-6"
           >
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
+            <h3 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
               My Expertise
             </h3>
             {expertise.map((item, index) => (
@@ -127,21 +127,21 @@ export default function About() {
                 key={index}
                 variants={fadeInUp}
                 whileHover={{ scale: 1.02 }}
-                className="p-4 rounded-lg bg-gray-900/50 backdrop-blur-sm border border-gray-200/10 transition-all hover:border-primary/50 group"
+                className="p-3 sm:p-4 rounded-lg bg-gray-900/50 backdrop-blur-sm border border-gray-200/10 transition-all hover:border-primary/50 group"
               >
-                <div className="flex items-start gap-4">
-                  <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-all flex-shrink-0">
                     {item.icon}
-          </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-gray-200 group-hover:text-primary">
+                  </div>
+                  <div className="overflow-hidden">
+                    <h4 className="text-base sm:text-lg font-semibold text-gray-200 group-hover:text-primary truncate">
                       {item.title}
                     </h4>
-                    <p className="text-gray-400">
+                    <p className="text-sm text-gray-400">
                       {item.description}
                     </p>
-              </div>
-            </div>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </motion.div>

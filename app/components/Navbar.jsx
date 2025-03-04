@@ -30,7 +30,7 @@ export default function Navbar() {
       <header className={`w-full transition-colors duration-300 ${
         scrolled ? 'bg-black/90 backdrop-blur-xl shadow-lg' : 'bg-transparent'
       }`}>
-        <div className="container py-4">
+        <div className="container py-3"> {/* Changed from py-4 to py-2 */}
           {/* Desktop: Single row layout */}
           <div className="hidden md:flex items-center justify-between">
             <Link 
@@ -90,26 +90,26 @@ export default function Navbar() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <span className="text-xl font-bold tracking-tight bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
+                <span className="text-xl font-bold tracking-tight bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent truncate">
                   Gyana Ranjan
                 </span>
               </Link>
               <Link 
                 href="#contact" 
-                className="px-5 py-2 text-sm font-medium text-white transition-all bg-gradient-to-r from-primary to-blue-600 rounded-full hover:shadow-lg hover:shadow-primary/30"
+                className="px-4 py-2 text-xs font-medium text-white transition-all bg-gradient-to-r from-primary to-blue-600 rounded-full hover:shadow-lg hover:shadow-primary/30"
               >
                 Hire Me
               </Link>
             </div>
             
-            <nav className="w-full overflow-x-auto scrollbar-hide -mx-4 px-4">
-              <div className="flex items-center gap-2 min-w-max pb-4">
+            <nav className="w-full overflow-x-auto scrollbar-hide"> {/* Removed pb-2 */}
+              <div className="flex items-center gap-2 min-w-max">
                 {navItems.map((item) => (
                   <Link
                     key={item}
                     href={`#${item.toLowerCase()}`}
                     className={`
-                      px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full
+                      px-3 py-1.5 text-xs font-medium transition-all duration-300 rounded-full
                       border border-gray-200/20 whitespace-nowrap
                       ${activeSection === item.toLowerCase()
                         ? 'bg-gradient-to-r from-primary to-blue-600 text-white border-transparent shadow-lg shadow-primary/30'
@@ -128,12 +128,3 @@ export default function Navbar() {
     </div>
   );
 }
-
-// Add this to your globals.css
-// .scrollbar-hide::-webkit-scrollbar {
-//   display: none;
-// }
-// .scrollbar-hide {
-//   -ms-overflow-style: none;
-//   scrollbar-width: none;
-// }

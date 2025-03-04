@@ -23,9 +23,9 @@ const experienceData = [
 
 const ExperienceCard = ({ experience }) => {
   return (
-    <div className="relative p-6 rounded-2xl bg-gray-900/50 backdrop-blur-sm border border-gray-200/10">
-      <div className="flex flex-col md:flex-row gap-6">
-        <div className="w-20 h-20 md:w-24 md:h-24 flex-shrink-0 overflow-hidden rounded-xl">
+    <div className="relative p-4 sm:p-6 rounded-2xl bg-gray-900/50 backdrop-blur-sm border border-gray-200/10">
+      <div className="flex flex-col md:flex-row gap-4 sm:gap-6">
+        <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex-shrink-0 overflow-hidden rounded-xl mx-auto md:mx-0">
           <img
             src={experience.image}
             alt={experience.company}
@@ -33,26 +33,26 @@ const ExperienceCard = ({ experience }) => {
           />
         </div>
         
-        <div className="flex-grow space-y-4">
+        <div className="flex-grow space-y-3 sm:space-y-4 text-center md:text-left">
           <div>
-            <h3 className="text-xl font-bold text-gray-200">{experience.title}</h3>
+            <h3 className="text-lg sm:text-xl font-bold text-gray-200">{experience.title}</h3>
             <p className="text-primary">{experience.company}</p>
-            <div className="flex flex-wrap gap-2 mt-1 text-sm text-gray-400">
+            <div className="flex flex-wrap justify-center md:justify-start gap-2 mt-1 text-xs sm:text-sm text-gray-400">
               <span>{experience.type}</span>
-              <span>•</span>
+              <span className="hidden xs:inline">•</span>
               <span>{experience.location}</span>
-              <span>•</span>
+              <span className="hidden xs:inline">•</span>
               <span>{experience.duration}</span>
             </div>
           </div>
           
-          <p className="text-gray-300">{experience.description}</p>
+          <p className="text-sm sm:text-base text-gray-300">{experience.description}</p>
           
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap justify-center md:justify-start gap-2">
             {experience.skills.map((skill, index) => (
               <span
                 key={index}
-                className="px-3 py-1 text-sm rounded-full bg-gray-200/10 text-gray-200 border border-gray-200/20"
+                className="px-2 py-1 text-xs rounded-full bg-gray-200/10 text-gray-200 border border-gray-200/20"
               >
                 {skill}
               </span>

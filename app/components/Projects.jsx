@@ -56,31 +56,31 @@ export default function Projects() {
       >
         <h2 className="section-title">Featured Projects</h2>
         
-        <motion.div className="grid gap-8">
+        <motion.div className="grid gap-6 md:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={index}
               variants={fadeInUp}
-              whileHover={{ scale: 1.02 }}
-              className={`grid gap-8 md:grid-cols-2 items-center p-6 rounded-lg ${
+              whileHover={{ scale: 1.01 }}
+              className={`overflow-hidden grid gap-6 md:gap-8 md:grid-cols-2 items-center p-4 sm:p-6 rounded-lg ${
                 project.featured ? 'bg-primary/10' : 'bg-gray-800'
               }`}
             >
-              <div className="h-64 overflow-hidden rounded-lg">
+              <div className="h-48 sm:h-64 overflow-hidden rounded-lg">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-gray-200">{project.title}</h3>
-                <p className="text-gray-300">{project.description}</p>
+              <div className="space-y-3 sm:space-y-4">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-200">{project.title}</h3>
+                <p className="text-gray-300 text-sm sm:text-base">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, i) => (
                     <span 
                       key={i} 
-                      className="px-3 py-1 text-sm rounded-full bg-gray-200/10 text-gray-200 border border-gray-200/20"
+                      className="px-2 py-1 text-xs rounded-full bg-gray-200/10 text-gray-200 border border-gray-200/20"
                     >
                       {tech}
                     </span>
@@ -91,7 +91,7 @@ export default function Projects() {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-medium text-white transition-all rounded-full bg-gradient-to-r from-primary to-blue-600 hover:shadow-lg hover:shadow-primary/30"
+                    className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white transition-all rounded-full bg-gradient-to-r from-primary to-blue-600 hover:shadow-lg hover:shadow-primary/30"
                   >
                     View Project
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -106,7 +106,7 @@ export default function Projects() {
 
         {selectedProject && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50">
-            <div className="relative w-full max-w-3xl p-8 bg-gray-800 rounded-lg">
+            <div className="relative w-full max-w-3xl p-4 sm:p-8 bg-gray-800 rounded-lg max-h-[90vh] overflow-y-auto">
               <button
                 onClick={() => setSelectedProject(null)}
                 className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-100"
@@ -116,33 +116,36 @@ export default function Projects() {
                 </svg>
               </button>
               
-              <div className="grid gap-8 md:grid-cols-2">
-                <div className="h-64 overflow-hidden rounded-lg">
+              <div className="grid gap-6 md:grid-cols-2">
+                <div className="h-48 sm:h-64 overflow-hidden rounded-lg">
                   <img
                     src={selectedProject.image}
                     alt={selectedProject.title}
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="space-y-4">
-                  <h3 className="text-2xl font-bold text-gray-200">{selectedProject.title}</h3>
-                  <p className="text-gray-300">{selectedProject.description}</p>
+                <div className="space-y-3 sm:space-y-4">
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-200">{selectedProject.title}</h3>
+                  <p className="text-gray-300 text-sm sm:text-base">{selectedProject.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {selectedProject.technologies.map((tech, i) => (
-                      <span key={i} className="px-3 py-1 text-sm rounded-full bg-gray-200/10 text-gray-200 border border-gray-200/20">
+                      <span key={i} className="px-2 py-1 text-xs rounded-full bg-gray-200/10 text-gray-200 border border-gray-200/20">
                         {tech}
                       </span>
                     ))}
                   </div>
-                  <p className="text-gray-300">{selectedProject.details}</p>
+                  <p className="text-gray-300 text-sm sm:text-base">{selectedProject.details}</p>
                   {selectedProject.link && (
                     <a
                       href={selectedProject.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-block mt-4 btn btn-primary"
+                      className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white transition-all rounded-full bg-gradient-to-r from-primary to-blue-600 hover:shadow-lg hover:shadow-primary/30"
                     >
                       View Project
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
                     </a>
                   )}
                 </div>

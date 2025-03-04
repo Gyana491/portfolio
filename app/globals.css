@@ -5,8 +5,8 @@
 :root {
   --background: #0a0a0a;
   --foreground: #ededed;
-  --header-height: 140px;
-  --header-height-mobile: 120px;
+  --header-height: 80px; /* Reduced from 140px */
+  --header-height-mobile: 70px; /* Reduced from 120px */
 }
 
 body {
