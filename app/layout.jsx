@@ -8,6 +8,10 @@ export const metadata = {
   description: 'Professional portfolio of Gyana Ranjan - Web Developer, Freelancer, and Entrepreneur specializing in WordPress, MERN Stack, and high-performance websites.',
 }
 
+export const viewport = {
+  themeColor: '#0a0a0a',
+}
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} dark`}>
