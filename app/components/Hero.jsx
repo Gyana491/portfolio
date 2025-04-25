@@ -40,15 +40,15 @@ export default function Hero() {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="text-4xl font-bold md:text-5xl lg:text-6xl"
           >
-            Hi, I'm <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">Gyana Ranjan</span>
+            <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">Building Technology</span> That Transforms Lives
           </motion.h1>
           <motion.h2 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.5 }}
-            className="text-2xl font-semibold md:text-3xl text-gray-200"
+            className="text-xl font-semibold md:text-2xl text-gray-200"
           >
-            Full Stack Developer & Tech Enthusiast
+            Empowering People. Solving Real Problems. Creating Lasting Impact.
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, x: -20 }}
@@ -56,8 +56,8 @@ export default function Hero() {
             transition={{ delay: 0.4, duration: 0.5 }}
             className="text-lg text-gray-400"
           >
-            Passionate about building scalable web applications and exploring new technologies.
-            Specializing in MERN stack, WordPress development, and creating efficient digital solutions.
+            I craft purposeful digital products that solve real problems, fuel innovation, and leave a lasting impact.
+            Driven by vision. Powered by code. Focused on people.
           </motion.p>
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -66,18 +66,16 @@ export default function Hero() {
             className="flex flex-wrap justify-center gap-4 md:justify-start"
           >
             <a 
-              href="https://www.linkedin.com/in/mr-gyan491/" 
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#contact" 
               className="px-6 py-2.5 text-sm font-medium text-white transition-all bg-gradient-to-r from-primary to-blue-600 rounded-full hover:shadow-lg hover:shadow-primary/30"
             >
-              Connect on LinkedIn
+              Connect With Me
             </a>
             <a 
               href="#projects" 
               className="px-6 py-2.5 text-sm font-medium transition-all rounded-full border border-gray-200/20 text-gray-200 hover:border-primary hover:text-primary"
             >
-              View My Work
+              Projects That Matter
             </a>
           </motion.div>
         </motion.div>

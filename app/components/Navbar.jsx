@@ -44,9 +44,12 @@ export default function Navbar() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <span className="text-2xl font-bold tracking-tight bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
-                Gyana Ranjan
-              </span>
+              <div className="flex flex-col">
+                <span className="text-xl font-bold tracking-tight bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
+                  Gyana Ranjan
+                </span>
+                <span className="text-xs text-gray-400">Building Technology That Transforms</span>
+              </div>
             </Link>
             
             <nav className="flex items-center gap-3">
@@ -71,7 +74,7 @@ export default function Navbar() {
                 href="#contact" 
                 className="ml-4 px-6 py-2.5 text-sm font-medium text-white transition-all bg-gradient-to-r from-primary to-blue-600 rounded-full hover:shadow-lg hover:shadow-primary/30"
               >
-                Hire Me
+                Let's Connect
               </Link>
             </nav>
           </div>
@@ -90,15 +93,18 @@ export default function Navbar() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <span className="text-xl font-bold tracking-tight bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent truncate">
-                  Gyana Ranjan
-                </span>
+                <div className="flex flex-col">
+                  <span className="text-base font-bold tracking-tight bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
+                    Gyana Ranjan
+                  </span>
+                  <span className="text-xs text-gray-400 truncate">Building Technology That Transforms</span>
+                </div>
               </Link>
               <Link 
                 href="#contact" 
                 className="px-4 py-2 text-xs font-medium text-white transition-all bg-gradient-to-r from-primary to-blue-600 rounded-full hover:shadow-lg hover:shadow-primary/30"
               >
-                Hire Me
+                Let's Connect
               </Link>
             </div>
             

@@ -10,7 +10,7 @@ const fadeInUp = {
 
 const experienceData = [
   {
-    title: "Team Lead",
+    title: "Founder & Full Stack Developer",
     company: "Swapify",
     type: "Part-time",
     location: "On-site", 

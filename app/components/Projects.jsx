@@ -13,36 +13,38 @@ export default function Projects() {
 
   const projects = [
     {
-      title: "Swapify - Secure Marketplace",
-      description: "India's first secure and ad-free second-hand marketplace, featuring Aadhaar verification and a trust-based community system.",
+      title: "MotorIndia.in – India's Ultimate Car & Bike Discovery Platform",
+      description: "Compare, explore, and visualize vehicles like never before. Built with custom 360° views, real-time data, and SEO-first architecture.",
+      image: "/motorindia-screenshot.jpg",
+      technologies: ["WordPress", "Custom Plugins", "SEO", "Tailwind CSS"],
+      link: "",
+      featured: true,
+      details: "MotorIndia transforms how Indians discover and compare vehicles with intuitive interfaces and comprehensive data. As founder, I architected the platform from scratch with a focus on performance, user experience, and search visibility to create India's leading automotive resource."
+    },
+    {
+      title: "Swapify.club – Where Giving Meets Purpose",
+      description: "Empowering communities to donate items and reduce waste. A local-first sustainability-driven initiative that bridges the gap between excess and need.",
       image: "/swapify-screenshot.png",
       technologies: ["Next.js", "Node.js", "MongoDB", "Aadhaar API", "AWS"],
       link: "https://swapify.club/",
       featured: true,
-      details: "Swapify revolutionizes the second-hand marketplace experience in India by prioritizing security and user trust. Built with modern technologies and featuring Aadhaar verification, the platform creates a safe environment for buyers and sellers while maintaining an ad-free, community-driven experience."
+      details: "Swapify revolutionizes the second-hand marketplace experience in India by prioritizing security, sustainability and user trust. Built with modern technologies and featuring Aadhaar verification, the platform creates a safe environment for donations while maintaining an ad-free, community-driven experience focused on reducing waste and promoting reuse."
     },
     {
-      title: "Jinny - Your Personal Voice Assistant",
-      description: "An AI companion that grows and evolves with you, combining intelligence with personality. Built with advanced AI technologies including LLaMA, text-to-speech, and speech-to-text capabilities.",
-      image: "/jinny-screenshot.jpg",
-      technologies: ["AI", "LLaMA", "Express.js", "WebSocket", "APIs"],
-      link: "https://jinny.onrender.com/",
-      featured: true,
-      details: "Jinny is more than just an AI assistant - she's a personality with heart and soul who learns and adapts to you. Think of her as the friendly neighbor who's always ready to help, combined with the wit of a stand-up comedian and the knowledge of a scholar."
-    },
-    {
-      title: "Motor India",
-      description: "India's leading autoportal providing comprehensive car information, comparisons, and 360-degree views for potential buyers.",
-      image: "/motorindia-screenshot.jpg",
-      technologies: ["WordPress", "Custom Plugins", "SEO", "Tailwind CSS"],
-      link: ""
-    },
-    {
-      title: "FresherJobAlert.in",
-      description: "Platform sharing the latest job notifications for freshers, helping new graduates find employment opportunities across various sectors.",
+      title: "FresherJobAlert.in – Job Platform for New Talent",
+      description: "Helping freshers break into the workforce with relevant, local job opportunities curated by smart algorithms.",
       image: "/fresherjobalert-screenshot.jpg",
-      technologies: ["WordPress", "Job Board", "SEO"],
-      link: "https://fresherjobalert.in"
+      technologies: ["WordPress", "Job Board", "SEO", "Custom Theme"],
+      link: "https://fresherjobalert.in",
+      details: "FresherJobAlert.in was created to address the challenge many new graduates face - finding entry-level positions. The platform uses custom algorithms to aggregate and categorize job postings specifically suitable for candidates with limited professional experience, making the job search process less overwhelming."
+    },
+    {
+      title: "DailyDeals Live",
+      description: "E-commerce platform featuring limited-time deals and offers with real-time notifications and seamless checkout experience.",
+      image: "/dailydeals-screenshot.jpg",
+      technologies: ["WordPress", "WooCommerce", "Custom Plugins", "Optimization"],
+      link: "",
+      details: "As a WordPress developer at DailyDeals Live, I implemented custom solutions to enhance user experience, optimize site performance, and improve conversion rates. The platform features real-time inventory updates, timed deals, and personalized recommendations."
     }
   ];
 
@@ -54,7 +56,7 @@ export default function Projects() {
         viewport={{ once: true }}
         className="container"
       >
-        <h2 className="section-title">Featured Projects</h2>
+        <h2 className="section-title">Projects That Matter</h2>
         
         <motion.div className="grid gap-6 md:gap-8">
           {projects.map((project, index) => (
@@ -86,26 +88,37 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
-                {project.link && (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white transition-all rounded-full bg-gradient-to-r from-primary to-blue-600 hover:shadow-lg hover:shadow-primary/30"
+                <div className="flex flex-wrap gap-3">
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white transition-all rounded-full bg-gradient-to-r from-primary to-blue-600 hover:shadow-lg hover:shadow-primary/30"
+                    >
+                      View Project
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                    </a>
+                  )}
+                  <button
+                    onClick={() => setSelectedProject(project)}
+                    className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium transition-all rounded-full border border-gray-200/20 text-gray-200 hover:border-primary hover:text-primary"
                   >
-                    View Project
+                    Learn More
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m-1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                  </a>
-                )}
+                  </button>
+                </div>
               </div>
             </motion.div>
           ))}
         </motion.div>
 
         {selectedProject && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
             <div className="relative w-full max-w-3xl p-4 sm:p-8 bg-gray-800 rounded-lg max-h-[90vh] overflow-y-auto">
               <button
                 onClick={() => setSelectedProject(null)}

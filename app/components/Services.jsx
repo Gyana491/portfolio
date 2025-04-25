@@ -1,54 +1,81 @@
+"use client";
+import { motion } from 'framer-motion';
+
+const fadeInUp = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.5 }
+};
+
 export default function Services() {
   const services = [
     {
-      title: "Website Development",
-      description: "Custom responsive websites built with modern frameworks and best practices for optimal performance.",
+      title: "Fullstack Web Development",
+      description: "Crafting high-performance websites, web apps, and systems that scale beautifully and work flawlessly across devices and platforms.",
       icon: "💻"
     },
     {
-      title: "WordPress Development",
-      description: "Custom WordPress themes, plugins, and complex dynamic websites tailored to your specific needs.",
-      icon: "🔌"
+      title: "Product Strategy & Architecture",
+      description: "From ideation to deployment — mapping out robust tech architecture and product flows that accelerate growth and ensure scalability.",
+      icon: "🧠"
     },
     {
-      title: "Page Speed Optimization",
-      description: "Improve your website's loading speed and overall performance to enhance user experience and SEO.",
-      icon: "⚡"
-    },
-    {
-      title: "Technical SEO",
-      description: "Implementation of schema markup and technical optimizations to improve search engine visibility.",
+      title: "SEO & Performance Optimization",
+      description: "Speed, structure, and search dominance — turning websites into lead-generating machines with technical SEO and performance tuning.",
       icon: "🔍"
     },
     {
-      title: "Website Migration & Backup",
-      description: "Safe migration of websites between hosts and comprehensive backup solutions to protect your data.",
-      icon: "🔄"
+      title: "API & Cloud Integration",
+      description: "Building secure, scalable, and efficient backend systems & microservices that power digital products for maximum reliability.",
+      icon: "☁️"
     },
     {
-      title: "Bug Fixing & Maintenance",
-      description: "Identify and resolve website issues, perform regular updates, and maintain optimal performance.",
+      title: "WordPress Development",
+      description: "Custom WordPress themes, plugins, and complex dynamic websites tailored to specific business needs with optimized performance.",
+      icon: "🔌"
+    },
+    {
+      title: "Technical Consultancy",
+      description: "Strategic guidance on technology choices, architecture decisions, and development roadmaps to achieve business objectives.",
       icon: "🔧"
     }
   ];
 
   return (
-    <section id="services" className="section">
-      <div className="container">
-        <h2 className="section-title">My Services</h2>
+    <section id="services" className="section bg-black">
+      <motion.div 
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+        className="container"
+      >
+        <motion.h2 
+          variants={fadeInUp}
+          className="section-title"
+        >
+          What I Do
+        </motion.h2>
         
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <motion.div 
+          variants={fadeInUp}
+          className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
+        >
           {services.map((service, index) => (
-            <div key={index} className="p-6 transition-all bg-gray-800 rounded-lg shadow-md hover:shadow-lg hover:border hover:border-primary/50">
-              <div className="flex items-center justify-center w-16 h-16 mb-4 text-3xl bg-blue-900/50 rounded-full">
+            <motion.div 
+              key={index}
+              variants={fadeInUp}
+              whileHover={{ scale: 1.03 }}
+              className="p-6 transition-all bg-gray-900/50 backdrop-blur-sm rounded-lg border border-gray-200/10 hover:border-primary/30"
+            >
+              <div className="flex items-center justify-center w-16 h-16 mb-4 text-3xl bg-primary/10 rounded-full">
                 {service.icon}
               </div>
               <h3 className="mb-3 text-xl font-bold text-gray-200">{service.title}</h3>
               <p className="text-gray-300">{service.description}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }
