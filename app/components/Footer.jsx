@@ -5,7 +5,7 @@ export default function Footer() {
   
   const socialLinks = [
     { name: 'LinkedIn', url: 'https://linkedin.com/in/mr-gyan491' },
-    { name: 'GitHub', url: 'https://github.com/mr-gyan491' },
+    { name: 'GitHub', url: 'https://github.com/gyana491' },
     { name: 'Email', url: 'mailto:gyanaranjanmohanta2004@gmail.com' },
   ]
 
